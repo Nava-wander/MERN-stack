@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Connect | Student List</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="top-header">
+
+        <div class="logo">
+            <div class="logo-icon">CC</div>
+
+            <div>
+                <h2>Campus Connect</h2>
+                <span>Student Community</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#students">Students</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="tag">STUDENT DIRECTORY</span>
+
+                <h1>
+                    Meet the people
+                    <span>behind the ideas.</span>
+                </h1>
+
+                <p>
+                    Build your student community by adding names
+                    to your directory and creating beautiful student cards.
+                </p>
+
+                <a href="#students" class="hero-button">
+                    Explore Students
+                    <span>↓</span>
+                </a>
+
+            </div>
+
+            <div class="hero-art">
+
+                <div class="circle circle-one"></div>
+                <div class="circle circle-two"></div>
+
+                <div class="floating-card card-one">
+                    <span>01</span>
+                    <strong>Learn</strong>
+                </div>
+
+                <div class="floating-card card-two">
+                    <span>02</span>
+                    <strong>Create</strong>
+                </div>
+
+                <div class="floating-card card-three">
+                    <span>03</span>
+                    <strong>Connect</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Student Section -->
+        <section class="student-section" id="students">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="small-heading">OUR COMMUNITY</span>
+
+                    <h2>Student Directory</h2>
+
+                    <p>
+                        Add three students and watch them appear below.
+                    </p>
+                </div>
+
+                <div class="student-count">
+                    <span id="studentCount">0</span>
+                    <small>Students</small>
+                </div>
+
+            </div>
+
+
+            <!-- Input Area -->
+            <div class="input-box">
+
+                <div class="input-content">
+
+                    <label for="studentInput">
+                        Add Students
+                    </label>
+
+                    <p>
+                        Enter three names separated by commas.
+                    </p>
+
+                    <input
+                        type="text"
+                        id="studentInput"
+                        placeholder="Example: Anitha, Rahul, Priya"
+                    >
+
+                </div>
+
+                <button id="addStudentBtn">
+                    <span>+</span>
+                    Add Students
+                </button>
+
+            </div>
+
+
+            <!-- Message -->
+            <p id="message" class="message"></p>
+
+
+            <!-- Student Cards -->
+            <div
+                id="studentList"
+                class="student-grid"
+            >
+
+                <!-- JavaScript will add student cards here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- About Section -->
+        <section class="about" id="about">
+
+            <div class="about-number">
+                01
+            </div>
+
+            <div>
+                <span class="small-heading">ABOUT THIS PROJECT</span>
+
+                <h2>
+                    Simple JavaScript.
+                    <br>
+                    Meaningful interaction.
+                </h2>
+
+                <p>
+                    This project demonstrates how JavaScript can interact
+                    with HTML elements dynamically. Student cards are created
+                    using JavaScript and inserted into the page without
+                    manually writing every card in HTML.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+            <strong>Campus Connect</strong>
+            <p>Built with HTML, CSS & JavaScript</p>
+        </div>
+
+        <span>
+            Student Directory © 2026
+        </span>
+
+    </footer>
+
+
+    <script src="intro.js"></script>
+
+</body>
+</html>

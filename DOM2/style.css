@@ -1,0 +1,785 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #fffaf5;
+    color: #29233f;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.top-header {
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fffaf5;
+
+    border-bottom: 1px solid #eee4dc;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #ff7657;
+    color: white;
+
+    font-weight: 700;
+    font-size: 13px;
+
+    box-shadow: 0 8px 20px rgba(255, 118, 87, 0.25);
+}
+
+.logo h2 {
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+.logo span {
+    font-size: 11px;
+    color: #8d849b;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5e576f;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff7657;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 90px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            #d9f6ec 0,
+            #d9f6ec 12%,
+            transparent 30%
+        ),
+        #fffaf5;
+}
+
+
+/* Hero content */
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 50px;
+
+    background: #ffe5dc;
+    color: #e55e42;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    margin-top: 25px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    color: #29233f;
+}
+
+.hero h1 span {
+    display: block;
+    color: #ff7657;
+}
+
+.hero p {
+    max-width: 520px;
+
+    margin-top: 25px;
+
+    color: #71697d;
+
+    font-size: 17px;
+}
+
+
+/* Hero button */
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 35px;
+
+    padding: 15px 22px;
+
+    background: #29233f;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #ff7657;
+    transform: translateY(-3px);
+}
+
+.hero-button span {
+    font-size: 20px;
+}
+
+
+/* Hero artwork */
+
+.hero-art {
+    width: 430px;
+    height: 430px;
+
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 330px;
+    height: 330px;
+
+    background: #d9f6ec;
+
+    top: 40px;
+    left: 40px;
+}
+
+.circle-two {
+    width: 180px;
+    height: 180px;
+
+    background: #ffd3c6;
+
+    bottom: 30px;
+    right: 10px;
+}
+
+
+/* Floating cards */
+
+.floating-card {
+    position: absolute;
+
+    padding: 20px 25px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 45px rgba(65, 45, 70, 0.12);
+
+    display: flex;
+    flex-direction: column;
+
+    backdrop-filter: blur(10px);
+}
+
+.floating-card span {
+    color: #ff7657;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.floating-card strong {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.card-one {
+    top: 70px;
+    left: 20px;
+}
+
+.card-two {
+    top: 175px;
+    right: 5px;
+}
+
+.card-three {
+    bottom: 50px;
+    left: 100px;
+}
+
+
+/* =========================
+   STUDENT SECTION
+========================= */
+
+.student-section {
+    padding: 100px 7%;
+
+    background: #f4efe8;
+}
+
+
+/* Section heading */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 45px;
+}
+
+.small-heading {
+    color: #ff7657;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 44px;
+}
+
+.section-heading p {
+    color: #817888;
+}
+
+
+/* Counter */
+
+.student-count {
+    min-width: 120px;
+
+    padding: 15px 20px;
+
+    border-left: 3px solid #ff7657;
+}
+
+.student-count span {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 40px;
+}
+
+.student-count small {
+    color: #837b88;
+}
+
+
+/* =========================
+   INPUT BOX
+========================= */
+
+.input-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 28px 32px;
+
+    background: #29233f;
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 50px rgba(41, 35, 63, 0.15);
+}
+
+.input-content {
+    flex: 1;
+}
+
+.input-content label {
+    color: white;
+
+    display: block;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.input-content p {
+    margin-bottom: 12px;
+
+    color: #bcb5c9;
+
+    font-size: 13px;
+}
+
+.input-content input {
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 12px;
+
+    background: #403951;
+    color: white;
+
+    font-family: inherit;
+}
+
+.input-content input::placeholder {
+    color: #aaa2b5;
+}
+
+
+/* Button */
+
+#addStudentBtn {
+    align-self: end;
+
+    padding: 15px 22px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #ff7657;
+    color: white;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#addStudentBtn:hover {
+    background: #ff9278;
+
+    transform: translateY(-2px);
+}
+
+#addStudentBtn span {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+/* Message */
+
+.message {
+    min-height: 25px;
+
+    margin: 18px 0;
+
+    color: #d95c44;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   STUDENT GRID
+========================= */
+
+.student-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Student card */
+
+.student-card {
+    padding: 28px;
+
+    background: #fffaf5;
+
+    border-radius: 22px;
+
+    border: 1px solid #eadfd5;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    animation: appear 0.5s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(72, 54, 75, 0.1);
+}
+
+
+/* Top decorative line */
+
+.student-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: #ff7657;
+}
+
+
+/* Avatar */
+
+.student-avatar {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #d9f6ec;
+
+    color: #28755c;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+/* Student name */
+
+.student-card h3 {
+    font-size: 20px;
+
+    color: #29233f;
+}
+
+.student-card p {
+    margin-top: 5px;
+
+    color: #918796;
+
+    font-size: 13px;
+}
+
+
+/* Student number */
+
+.student-number {
+    position: absolute;
+
+    right: 25px;
+    top: 22px;
+
+    font-size: 12px;
+
+    color: #b4aab6;
+
+    font-weight: 700;
+}
+
+
+/* Animation */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 110px 7%;
+
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 50px;
+
+    background: #fffaf5;
+}
+
+.about-number {
+    font-family: "Playfair Display", serif;
+
+    font-size: 70px;
+
+    color: #ff7657;
+}
+
+.about h2 {
+    margin-top: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    line-height: 1.15;
+}
+
+.about p {
+    max-width: 700px;
+
+    margin-top: 20px;
+
+    color: #746c7d;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #29233f;
+
+    color: white;
+}
+
+footer strong {
+    font-size: 15px;
+}
+
+footer p,
+footer span {
+    color: #aaa2b5;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 60px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-art {
+        transform: scale(0.8);
+    }
+
+    .student-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .top-header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-art {
+        width: 320px;
+        height: 320px;
+        transform: scale(0.8);
+    }
+
+    .student-section {
+        padding: 70px 5%;
+    }
+
+    .section-heading {
+        align-items: start;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .input-box {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    #addStudentBtn {
+        align-self: stretch;
+    }
+
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        padding: 70px 5%;
+
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .about h2 {
+        font-size: 36px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        align-items: start;
+
+        gap: 15px;
+    }
+
+}
